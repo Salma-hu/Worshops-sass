@@ -1,0 +1,154 @@
+$color-blue: hsl(223, 87%, 63%);
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$dark-blue: hsl(209, 33%, 12%);
+$color-silver: silver;
+$width-responsive: 600px;
+
+body {
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+}
+
+@mixin btn {
+  border: none;
+  color: white;
+  background-color: $color-blue;
+  height: 7vh;
+  width: 9vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 20px;
+}
+
+@mixin but {
+  width: 25vw;
+  height: 7vh;
+  border: 2px solid;
+  color: $color-silver;
+  border-radius: 20px;
+}
+
+@mixin hover {
+  
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90px;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+
+  &__soon {
+    &--title {
+      color: $gray;
+      font-weight: 80;
+    }
+  }
+  &__subscribe {
+    font-weight: 80;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  &__input-div {
+    margin-right: 1%;
+  }
+
+  
+
+  &__input-div--email {
+    @include but;
+  }
+
+  &__button--submit {
+    
+      @include btn;
+
+      &:hover {
+        background-color: red;
+      }
+    
+}
+}
+
+.dash__dashboard {
+  width: 50%;
+  padding-left: 2%;
+  padding-top: 6%;
+}
+
+#social {
+  margin-top: 15%;
+  i {
+    font-size: 1rem;
+    color: $color-blue;
+    border: 0.4px solid;
+    padding: 0.5rem;
+    border-radius: 100%;
+    margin: 0.5rem;
+  }
+}
+h4 {
+  font-size: 15%;
+  margin: 1%;
+  color: $gray;
+  font-weight: normal;
+  font-size: 60%;
+}
+
+.attribution {
+  font-size: 10px;
+  padding: 0;
+  color: $color-blue;
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .form{
+        display: block;
+        justify-content: center;
+        
+
+        &__input-div {
+            &--email {
+                
+            width: 50vw;
+            height: 7mvh;
+            }
+          }
+
+        &__button{ 
+
+                width: 50vw;
+                margin-left: 13%;
+                padding: 1rem;
+                font-size: .8em;                     
+    }
+
+    } 
+    }
+    
+
